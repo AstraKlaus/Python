@@ -68,6 +68,8 @@ def convert():
                     print(extranum,newNum,end="\n")
                 textvar.set(newNum)
         else: messagebox.showinfo("Информация", "Невозможно перевести в эту систему счисления")
+
+
 charmax = 0
 answer = "+"
 textvariable = StringVar()
