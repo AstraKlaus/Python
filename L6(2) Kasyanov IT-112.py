@@ -50,7 +50,7 @@ elif a_1 == b_2:
 else:
     print("победила команда номер 2 со счетом", b_2, "/", a_1)
 
- v1, v2, v3, v4, v5, v6, v7, = 0,0,0,0,0,0,0
+v1, v2, v3, v4, v5, v6, v7, = 0,0,0,0,0,0,0
 
 n = random.randint(1,200)
 
@@ -117,7 +117,7 @@ z = random.randint(1,30)
 
 k = 0
 while x > 0:
-    while y > 0
+    while y > 0:
         while z > 0:
             if x**2 + y ** 2 == z ** 2 or z**2 + y ** 2 == x ** 2 or x**2 + z ** 2 == y ** 2:
                 k += 1
