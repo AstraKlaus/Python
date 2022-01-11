@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter.ttk import Combobox
 from tkinter import ttk
+import pygame
 import random
 
 
@@ -22,10 +23,25 @@ def pressToLess(number):
         canvasForAccords.pack()
 
         canvasForAccords.create_image(70, 50, image=imageBoy)
-        canvasForAccords.create_image(220, 50, image=imageAm)
-        canvasForAccords.create_image(360, 50, image=imageC)
+        canvasForAccords.create_image(225, 50, image=imageAm)
+        canvasForAccords.create_image(380, 50, image=imageC)
         canvasForAccords.create_image(70, 140, image=imageDm)
         canvasForAccords.create_image(225, 140, image=imageG)
+
+        frameForMusic = Frame(lesson, bg="lavender")
+        frameForMusic.pack()
+
+        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="lavender")
+        songName.pack(side=LEFT, anchor="n")
+
+        rewindMusic = Button(frameForMusic, image = imageRewind, command = rewind(), bg="lavender")
+        rewindMusic.pack(side=RIGHT, anchor="ne")
+
+        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="lavender")
+        stopSong.pack(side=RIGHT, anchor="ne")
+
+        playSong = Button(frameForMusic, image = imagePlay, command = play, bg = "lavender")
+        playSong.pack(side=RIGHT, anchor="ne")
 
         generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg = "lavender")
         generalname.pack(side=TOP)
@@ -140,9 +156,26 @@ def pressToLess(number):
 
         e.config(yscrollcommand=scroll.set)
 
+def play():
+    pygame.mixer.music.load("Звезда по имени солнце.mp3")
+    if isPlaying:
+        pygame.mixer.music.play(loops=0)
+    else:
+        pygame.mixer.music.unpause()
+
+def stop():
+    global isPlaying
+    pygame.mixer.music.stop()
+    isPlaying = False
+
+def rewind():
+    pygame.mixer.music.load("Звезда по имени солнце.mp3")
+    pygame.mixer.music.play()
 
 root = Tk()
 root.geometry("350x550")
+
+pygame.mixer.init()
 
 notebook = ttk.Notebook(root)
 notebook.grid(row=0, column=0, pady=10)
@@ -159,6 +192,8 @@ answer = IntVar()
 answer2 = IntVar()
 answer3 = IntVar()
 answer4 = IntVar()
+
+isPlaying = True
 
 p1 = PhotoImage(file='first.png').subsample(9, 9)
 
@@ -190,7 +225,7 @@ imageAm = PhotoImage(file='am.png').subsample(16, 16)
 
 imageDm = PhotoImage(file='dm.png').subsample(10, 10)
 
-imageC = PhotoImage(file='c.png').subsample(11, 11)
+imageC = PhotoImage(file='c.png').subsample(10, 10)
 
 imageG = PhotoImage(file='g.png').subsample(10, 10)
 
@@ -205,6 +240,12 @@ imageH7 = PhotoImage(file='h7.png').subsample(10, 10)
 imageTonal = PhotoImage(file='Тоника.png').subsample(2, 2)
 
 imagePerebor = PhotoImage(file='Перебор.png').subsample(3, 3)
+
+imagePlay = PhotoImage(file = "play.png").subsample(35,35)
+
+imageStop = PhotoImage(file = "stop.png").subsample(35,35)
+
+imageRewind = PhotoImage(file = "rewind.png").subsample(35,35)
 
 songsData = ["""Am(4)
 Белый снег, серый лед,
