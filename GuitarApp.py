@@ -8,21 +8,21 @@ from tkinter import messagebox
 
 def pressToLess(number):
     if number == 1:
-        lesson = Toplevel(root, width=500, height=550, bg="lavender")
+        lesson = Toplevel(root, width=500, height=550, bg="#f4fef6")
 
         name = Label(lesson, text="Урок 1: 'Звезда по имени солнце'", font=("Times new roman", 16, "italic"),
-                     bg="lavender")
+                     bg="#f4fef6")
         name.pack(side=TOP)
 
         complete = Checkbutton(lesson, text="Урок выполнен", justify=RIGHT,
                                fg=f"{'red' if answer.get() == 0 else 'green'}",
                                variable=answer, offvalue=0, onvalue=1,
                                command=lambda: complete.config(fg=f"{'red' if answer.get() == 0 else 'green'}"),
-                               bg="lavender", activebackground="lavender")
+                               bg="#f4fef6", activebackground="#f4fef6")
 
         complete.pack(side=TOP)
 
-        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="lavender")
+        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="#f4fef6")
         canvasForAccords.pack()
 
         AccordBoy = Button(canvasForAccords, image=imageBoy, relief=RIDGE)
@@ -40,25 +40,25 @@ def pressToLess(number):
         AccordG = Button(canvasForAccords, image=imageG, relief=RIDGE)
         AccordG.grid(row=1, column=1)
 
-        frameForMusic = Frame(lesson, bg="lavender")
+        frameForMusic = Frame(lesson, bg="#f4fef6")
         frameForMusic.pack()
 
-        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="lavender")
+        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="#f4fef6")
         songName.pack(side=LEFT, anchor="n")
 
-        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(1), bg="lavender")
+        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(1), bg="#f4fef6")
         rewindMusic.pack(side=RIGHT, anchor="ne")
 
-        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="lavender")
+        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="#f4fef6")
         stopSong.pack(side=RIGHT, anchor="ne")
 
-        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(1), bg="lavender")
+        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(1), bg="#f4fef6")
         playSong.pack(side=RIGHT, anchor="ne")
 
-        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="lavender")
+        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="#f4fef6")
         generalname.pack(side=TOP)
 
-        e = Text(lesson, width=50, height=20, bg="lavender")
+        e = Text(lesson, width=50, height=20, bg="#f4fef6")
         e.insert(1.0, songsData[0])
         e.pack(side=LEFT)
         e.config(state=DISABLED)
@@ -69,19 +69,19 @@ def pressToLess(number):
         e.config(yscrollcommand=scroll.set)
 
     if number == 2:
-        lesson = Toplevel(root, width=500, height=550, bg="lavender")
+        lesson = Toplevel(root, width=500, height=550, bg="#f4fef6")
 
-        name = Label(lesson, text="Урок 2: 'Просвистела'", font=("Times new roman", 16, "italic"), bg="lavender")
+        name = Label(lesson, text="Урок 2: 'Просвистела'", font=("Times new roman", 16, "italic"), bg="#f4fef6")
         name.pack(side=TOP)
 
         complete = Checkbutton(lesson, text="Урок выполнен", justify=RIGHT,
                                fg=f"{'red' if answer2.get() == 0 else 'green'}",
                                variable=answer2, offvalue=0, onvalue=1,
                                command=lambda: complete.config(fg=f"{'red' if answer2.get() == 0 else 'green'}"),
-                               bg="lavender", activebackground="lavender")
+                               bg="#f4fef6", activebackground="#f4fef6")
         complete.pack(side=TOP)
 
-        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="lavender")
+        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="#f4fef6")
         canvasForAccords.pack()
 
         AccordBoy = Button(canvasForAccords, image=imageBoy2, relief=RIDGE)
@@ -99,25 +99,25 @@ def pressToLess(number):
         AccordG = Button(canvasForAccords, image=imageG, relief=RIDGE)
         AccordG.grid(row=1, column=1)
 
-        frameForMusic = Frame(lesson, bg="lavender")
+        frameForMusic = Frame(lesson, bg="#f4fef6")
         frameForMusic.pack()
 
-        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="lavender")
+        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="#f4fef6")
         songName.pack(side=LEFT, anchor="n")
 
-        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(2), bg="lavender")
+        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(2), bg="#f4fef6")
         rewindMusic.pack(side=RIGHT, anchor="ne")
 
-        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="lavender")
+        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="#f4fef6")
         stopSong.pack(side=RIGHT, anchor="ne")
 
-        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(2), bg="lavender")
+        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(2), bg="#f4fef6")
         playSong.pack(side=RIGHT, anchor="ne")
 
-        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="lavender")
+        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="#f4fef6")
         generalname.pack(side=TOP)
 
-        e = Text(lesson, width=50, height=20, bg="lavender")
+        e = Text(lesson, width=50, height=20, bg="#f4fef6")
         e.insert(1.0, songsData[1])
         e.pack(side=LEFT)
         e.config(state=DISABLED)
@@ -127,19 +127,19 @@ def pressToLess(number):
 
         e.config(yscrollcommand=scroll.set)
     if number == 3:
-        lesson = Toplevel(root, width=500, height=550, bg="lavender")
+        lesson = Toplevel(root, width=500, height=550, bg="#f4fef6")
 
-        name = Label(lesson, text="Урок 3: 'Лирика'", font=("Times new roman", 16, "italic"), bg="lavender")
+        name = Label(lesson, text="Урок 3: 'Лирика'", font=("Times new roman", 16, "italic"), bg="#f4fef6")
         name.pack(side=TOP)
 
         complete = Checkbutton(lesson, text="Урок выполнен", justify=RIGHT,
                                fg=f"{'red' if answer3.get() == 0 else 'green'}",
                                variable=answer3, offvalue=0, onvalue=1,
                                command=lambda: complete.config(fg=f"{'red' if answer3.get() == 0 else 'green'}"),
-                               bg="lavender", activebackground="lavender")
+                               bg="#f4fef6", activebackground="#f4fef6")
         complete.pack(side=TOP)
 
-        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="lavender")
+        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="#f4fef6")
         canvasForAccords.pack()
 
         AccordBoy = Button(canvasForAccords, image=imageBoy7, relief=RIDGE)
@@ -157,25 +157,25 @@ def pressToLess(number):
         AccordG = Button(canvasForAccords, image=imageDm, relief=RIDGE)
         AccordG.grid(row=1, column=1)
 
-        frameForMusic = Frame(lesson, bg="lavender")
+        frameForMusic = Frame(lesson, bg="#f4fef6")
         frameForMusic.pack()
 
-        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="lavender")
+        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="#f4fef6")
         songName.pack(side=LEFT, anchor="n")
 
-        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(3), bg="lavender")
+        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(3), bg="#f4fef6")
         rewindMusic.pack(side=RIGHT, anchor="ne")
 
-        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="lavender")
+        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="#f4fef6")
         stopSong.pack(side=RIGHT, anchor="ne")
 
-        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(3), bg="lavender")
+        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(3), bg="#f4fef6")
         playSong.pack(side=RIGHT, anchor="ne")
 
-        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="lavender")
+        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="#f4fef6")
         generalname.pack(side=TOP)
 
-        e = Text(lesson, width=50, height=20, bg="lavender")
+        e = Text(lesson, width=50, height=20, bg="#f4fef6")
         e.insert(1.0, songsData[2])
         e.pack(side=LEFT)
         e.config(state=DISABLED)
@@ -185,19 +185,19 @@ def pressToLess(number):
 
         e.config(yscrollcommand=scroll.set)
     if number == 4:
-        lesson = Toplevel(root, width=500, height=550, bg="lavender")
+        lesson = Toplevel(root, width=500, height=550, bg="#f4fef6")
 
-        name = Label(lesson, text="Урок 4: 'Мое сердце'", font=("Times new roman", 16, "italic"), bg="lavender")
+        name = Label(lesson, text="Урок 4: 'Мое сердце'", font=("Times new roman", 16, "italic"), bg="#f4fef6")
         name.pack(side=TOP)
 
         complete = Checkbutton(lesson, text="Урок выполнен", justify=RIGHT,
                                fg=f"{'red' if answer4.get() == 0 else 'green'}",
                                variable=answer4, offvalue=0, onvalue=1,
                                command=lambda: complete.config(fg=f"{'red' if answer4.get() == 0 else 'green'}"),
-                               bg="lavender", activebackground="lavender")
+                               bg="#f4fef6", activebackground="#f4fef6")
         complete.pack(side=TOP)
 
-        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="lavender")
+        canvasForAccords = LabelFrame(lesson, height=200, width=500, bg="#f4fef6")
         canvasForAccords.pack()
 
         AccordBoy = Button(canvasForAccords, image=imageBoy, relief=RIDGE)
@@ -215,25 +215,25 @@ def pressToLess(number):
         AccordG = Button(canvasForAccords, image=imageEm, relief=RIDGE)
         AccordG.grid(row=1, column=1)
 
-        frameForMusic = Frame(lesson, bg="lavender")
+        frameForMusic = Frame(lesson, bg="#f4fef6")
         frameForMusic.pack()
 
-        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="lavender")
+        songName = Label(frameForMusic, text="Прослушать песню", font=("Times new roman", 14), bg="#f4fef6")
         songName.pack(side=LEFT, anchor="n")
 
-        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(4), bg="lavender")
+        rewindMusic = Button(frameForMusic, image=imageRewind, command=lambda: rewind(4), bg="#f4fef6")
         rewindMusic.pack(side=RIGHT, anchor="ne")
 
-        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="lavender")
+        stopSong = Button(frameForMusic, image=imageStop, command=stop, bg="#f4fef6")
         stopSong.pack(side=RIGHT, anchor="ne")
 
-        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(4), bg="lavender")
+        playSong = Button(frameForMusic, image=imagePlay, command=lambda: play(4), bg="#f4fef6")
         playSong.pack(side=RIGHT, anchor="ne")
 
-        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="lavender")
+        generalname = Label(lesson, text="Текст песни: ", font=("Times new roman", 16, "bold"), bg="#f4fef6")
         generalname.pack(side=TOP)
 
-        e = Text(lesson, width=50, height=20, bg="lavender")
+        e = Text(lesson, width=50, height=20, bg="#f4fef6")
         e.insert(1.0, songsData[3])
         e.pack(side=LEFT)
         e.config(state=DISABLED)
@@ -296,11 +296,11 @@ pygame.mixer.init()
 notebook = ttk.Notebook(root)
 notebook.grid(row=0, column=0, pady=10)
 
-section = Frame(notebook, width=550, height=500, bg="lavender")
+section = Frame(notebook, width=550, height=500, bg="#f4fef6")
 section.grid(row=0, column=0)
 notebook.add(section, text='Уроки')
 
-accords = Frame(notebook, width=550, height=500, bg="lavender")
+accords = Frame(notebook, width=550, height=500, bg="#f4fef6")
 accords.grid(row=0, column=1, pady=10)
 notebook.add(accords, text='Аккорды')
 
@@ -316,21 +316,21 @@ p2 = PhotoImage(file='second.png').subsample(4, 4)
 p3 = PhotoImage(file='third.png').subsample(3, 3)
 p4 = PhotoImage(file='fourth.png').subsample(10, 10)
 
-first = Button(section, image=p1, text="Первый урок", bg="#999999",font=("Times New Roman", 12), height=100, width=250, relief=RIDGE,
+first = Button(section, image=p1, text="Первый урок", bg="#e8f6f4",font=("Times New Roman", 12), height=100, width=250, relief=RIDGE,
                compound=BOTTOM, command=lambda: messagebox.showerror("Покупка", message = "Сначала надо приобрести урок") if freePass["relief"] == RAISED else pressToLess(1))
 first.grid(row=0, column=0, padx=20, pady=10)
 
 second = Button(section, image=p2, text="Второй урок", font=("Times New Roman", 12), height=100, width=250,
                 relief=RIDGE,
                 compound=BOTTOM, command=lambda: messagebox.showerror("Покупка", message = "Сначала надо приобрести урок") if purchaseSecond["relief"] == RAISED else pressToLess(2),
-                      bg = '#999999')
+                      bg = '#e8f6f4')
 second.grid(row=1, column=0, padx=20, pady=10)
 
-third = Button(section, image=p3, text="Третий урок",bg="#999999", font=("Times New Roman", 12), height=100, width=250, relief=RIDGE,
+third = Button(section, image=p3, text="Третий урок",bg="#e8f6f4", font=("Times New Roman", 12), height=100, width=250, relief=RIDGE,
                compound=BOTTOM, command=lambda: messagebox.showerror("Покупка", message = "Сначала надо приобрести урок") if purchaseThird["relief"] == RAISED else pressToLess(3))
 third.grid(row=2, column=0, padx=20, pady=10)
 
-fourth = Button(section, image=p4, text="Четверый урок",bg="#999999", font=("Times New Roman", 12), height=100, width=250,
+fourth = Button(section, image=p4, text="Четверый урок",bg="#e8f6f4", font=("Times New Roman", 12), height=100, width=250,
                 relief=RIDGE,
                 compound=BOTTOM, command=lambda: messagebox.showerror("Покупка", message = "Сначала надо приобрести урок") if purchaseFourth["relief"] == RAISED else pressToLess(4))
 fourth.grid(row=3, column=0, padx=20, pady=10)
@@ -338,20 +338,20 @@ fourth.grid(row=3, column=0, padx=20, pady=10)
 free = PhotoImage(file="free.png").subsample(20, 20)
 purchase = PhotoImage(file="purchase.png").subsample(2,2)
 
-freePass = Button(section, image=free, text="Бесплатно", compound=LEFT, font=("Times New Roman", 12),
-                   relief=RAISED, command=lambda: (freePass.config(relief=SUNKEN, state = DISABLED), first.config(bg="#66FF00")))
+freePass = Button(section, image=free, text="Бесплатно", compound=LEFT, font=("Times New Roman", 12),bg = "#b3d5e9",
+                   relief=RAISED, command=lambda: (freePass.config(relief=SUNKEN, state = DISABLED), first.config(bg="#b1e1a2")))
 freePass.grid(row=0, column=1)
 
-purchaseSecond = Button(section, image=purchase, text="Купить", compound=LEFT, font=("Times New Roman", 12),
-                   relief=RAISED, command=lambda: (purchaseSecond.config(relief=SUNKEN, state = DISABLED), second.config(bg="#66FF00")))
+purchaseSecond = Button(section, image=purchase, text="Купить", compound=LEFT, font=("Times New Roman", 12),bg = "#b3d5e9",
+                   width= 130,height=40, relief=RAISED, command=lambda: (purchaseSecond.config(relief=SUNKEN, state = DISABLED), second.config(bg="#b1e1a2")))
 purchaseSecond.grid(row=1, column=1)
 
-purchaseThird = Button(section, image=purchase, text="Купить", compound=LEFT, font=("Times New Roman", 12),
-                   relief=RAISED, command=lambda: (purchaseThird.config(relief=SUNKEN, state = DISABLED), third.config(bg="#66FF00")))
+purchaseThird = Button(section, image=purchase, text="Купить", compound=LEFT, font=("Times New Roman", 12),bg = "#b3d5e9",
+                   relief=RAISED,width= 130,height=40, command=lambda: (purchaseThird.config(relief=SUNKEN, state = DISABLED), third.config(bg="#b1e1a2")))
 purchaseThird.grid(row=2, column=1)
 
-purchaseFourth = Button(section, image=purchase, text="Купить", compound=LEFT, font=("Times New Roman", 12),
-                   relief=RAISED, command=lambda: (purchaseFourth.config(relief=SUNKEN, state = DISABLED), fourth.config(bg="#66FF00")))
+purchaseFourth = Button(section, image=purchase, text="Купить", compound=LEFT, font=("Times New Roman", 12), bg = "#b3d5e9",
+                   relief=RAISED,width= 130,height=40, command=lambda: (purchaseFourth.config(relief=SUNKEN, state = DISABLED), fourth.config(bg="#b1e1a2")))
 purchaseFourth.grid(row=3, column=1)
 
 imageBoy = PhotoImage(file='Бой.png').subsample(3, 3)
@@ -395,7 +395,7 @@ imageStop = PhotoImage(file="stop.png").subsample(35, 35)
 
 imageRewind = PhotoImage(file="rewind.png").subsample(35, 35)
 
-aAccords = LabelFrame(accords, text="Аккорды А (Ля)", bg="lavender")
+aAccords = LabelFrame(accords, text="Аккорды А (Ля)", bg="#f4fef6")
 aAccords.pack(padx=20, pady=3)
 
 subA = Button(aAccords, image=imageA, command=lambda: fullScreen(imageA), relief=RIDGE)
@@ -407,7 +407,7 @@ subAm.grid(row=0, column=1)
 subASharp = Button(aAccords, image=imageASharp, command=lambda: fullScreen(imageASharp), relief=RIDGE)
 subASharp.grid(row=0, column=2)
 
-cAccords = LabelFrame(accords, text="Аккорды С (До)", bg="lavender")
+cAccords = LabelFrame(accords, text="Аккорды С (До)", bg="#f4fef6")
 cAccords.pack(padx=20, anchor="w", pady=3)
 
 subC = Button(cAccords, image=imageC, command=lambda: fullScreen(imageC), relief=RIDGE)
@@ -416,7 +416,7 @@ subC.grid(row=0, column=0)
 subCBar = Button(cAccords, image=imageCSharp, command=lambda: fullScreen(imageCSharp), relief=RIDGE)
 subCBar.grid(row=0, column=1)
 
-dAccords = LabelFrame(accords, text="Аккорды D (Ре)", bg="lavender")
+dAccords = LabelFrame(accords, text="Аккорды D (Ре)", bg="#f4fef6")
 dAccords.pack(padx=20, pady=3)
 
 subD = Button(dAccords, image=imageD, command=lambda: fullScreen(imageD), relief=RIDGE)
@@ -428,7 +428,7 @@ subDm.grid(row=0, column=1)
 subDmSharp = Button(dAccords, image=imageDmSharp, command=lambda: fullScreen(imageDmSharp), relief=RIDGE)
 subDmSharp.grid(row=0, column=2)
 
-eAccords = LabelFrame(accords, text="Аккорды E (Ми)", bg="lavender")
+eAccords = LabelFrame(accords, text="Аккорды E (Ми)", bg="#f4fef6")
 eAccords.pack(padx=20, pady=3)
 
 subE = Button(eAccords, image=imageE, command=lambda: fullScreen(imageE), relief=RIDGE)
